@@ -28,4 +28,19 @@ return {
       require "configs.lint"
     end,
   },
+
+  -- Debuger
+  {
+    "mfussenegger/nvim-dap",
+  },
+
+  {
+    "rcarriga/nvim-dap-ui",
+    config = function()
+      require "configs.dapui"
+    end,
+    dependencies = {
+      "mfussenegger/nvim-dap",
+    },
+  },
 }
