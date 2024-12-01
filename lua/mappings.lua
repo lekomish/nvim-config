@@ -7,6 +7,12 @@ map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 
+-- Git
+map("n", "<leader>gl", ":Flog <cr>", { desc = "Git log" })
+map("n", "<leader>gh", ":DiffviewFileHistory <cr>", { desc = "Git history" })
+map("n", "<leader>gc", ":DiffviewOpen HEAD~1 <cr>", { desc = "Git last commit" })
+map("n", "<leader>gh", ":DiffviewToggleFile <cr>", { desc = "Toggle git commits history" })
+
 -- Debug
 map("n", "<leader>du", function()
   require("dapui").toggle()

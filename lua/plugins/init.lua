@@ -43,4 +43,55 @@ return {
       "mfussenegger/nvim-dap",
     },
   },
+
+  -- Git
+  {
+    "tpope/vim-fugitive",
+  },
+
+  {
+    "rbong/vim-flog",
+    lazy = false,
+    dependencies = {
+      "tpope/vim-fugitive",
+    },
+  },
+
+  {
+    "sindrets/diffview.nvim",
+    lazy = false,
+  },
+
+  -- Asynchronous IO
+  {
+    "nvim-neotest/nvim-nio",
+  },
+
+  -- Better UI
+  {
+    "stevearc/dressing.nvim",
+    lazy = false,
+  },
+
+  {
+    "kevinhwang91/nvim-bqf",
+    lazy = false,
+  },
+
+  {
+    "folke/trouble.nvim",
+    lazy = false,
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
+  },
+
+  -- Better movement
+  {
+    "ggandor/leap.nvim",
+    laze = false,
+    config = function()
+      require("leap").add_default_mappings(true)
+    end,
+  },
 }
