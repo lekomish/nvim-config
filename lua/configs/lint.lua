@@ -1,1 +1,3 @@
-require("lint").linters_by_ft = {}
+require("lint").linters_by_ft = {
+  python = { "ruff", "mypy" },
+}
