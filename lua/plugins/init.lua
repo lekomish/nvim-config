@@ -19,4 +19,13 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = require "configs.treesitter",
   },
+
+  -- Lint
+  {
+    "mfussenegger/nvim-lint",
+    event = "VeryLazy",
+    config = function()
+      require "configs.lint"
+    end,
+  },
 }
