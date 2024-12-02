@@ -1,6 +1,7 @@
 local options = {
   formatters_by_ft = {
     css = { "prettier" },
+    go = { "gofumpt", "goimports-reviser", "golines" },
     html = { "prettier" },
     lua = { "stylua" },
     python = { "isort", "black" },
@@ -29,6 +30,13 @@ local options = {
         "90",
         "--quiet",
         "-",
+      },
+    },
+
+    -- Go
+    ["go-imports-reviser"] = {
+      prepend_args = {
+        "-rm-unused",
       },
     },
   },

@@ -8,10 +8,10 @@ map("i", "jk", "<ESC>")
 map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 
 -- Git
-map("n", "<leader>gl", ":Flog <cr>", { desc = "Git log" })
-map("n", "<leader>gh", ":DiffviewFileHistory <cr>", { desc = "Git history" })
-map("n", "<leader>gc", ":DiffviewOpen HEAD~1 <cr>", { desc = "Git last commit" })
-map("n", "<leader>gh", ":DiffviewToggleFile <cr>", { desc = "Git toggle commits history" })
+map("n", "<leader>gl", "<cmd> Flog <cr>", { desc = "Git log" })
+map("n", "<leader>gh", "<cmd> DiffviewFileHistory <cr>", { desc = "Git history" })
+map("n", "<leader>gc", "<cmd> DiffviewOpen HEAD~1 <cr>", { desc = "Git last commit" })
+map("n", "<leader>gh", "<cmd> DiffviewToggleFile <cr>", { desc = "Git toggle commits history" })
 
 -- Debug
 map("n", "<leader>du", function()
@@ -26,3 +26,7 @@ end, { desc = "Debug start" })
 map("n", "<leader>dn", function()
   require("dap").step_over()
 end, { desc = "Debug step over" })
+
+-- Go
+map("n", "<leader>gsj", "<cmd> GoTagAdd json <cr>", { desc = "Go add JSON tag to struct" })
+map("n", "<leader>gsy", "<cmd> GoTagAdd yaml <cr>", { desc = "Go add YAML tag to struct" })

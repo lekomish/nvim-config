@@ -49,7 +49,8 @@ return {
     "mfussenegger/nvim-dap-python",
     ft = "python",
     config = function()
-      require "configs.dap.python"
+      local path = "~/AppData/Local/nvim-data/mason/packages/debugpy/venv/Scripts/python.exe"
+      require("dap-python").setup(path)
     end,
     dependencies = {
       "mfussenegger/nvim-dap",
@@ -105,6 +106,18 @@ return {
     laze = false,
     config = function()
       require("leap").add_default_mappings(true)
+    end,
+  },
+
+  -- Go plugins
+  {
+    "olexsmir/gopher.nvim",
+    ft = "go",
+    config = function(_, opts)
+      require("gopher").setup(opts)
+    end,
+    build = function()
+      vim.cmd [[silent! GoInstallDeps]]
     end,
   },
 }
