@@ -103,7 +103,7 @@ return {
   -- Better movement
   {
     "ggandor/leap.nvim",
-    laze = false,
+    lazy = false,
     config = function()
       require("leap").add_default_mappings(true)
     end,
@@ -128,7 +128,7 @@ return {
     opts = function()
       require "configs.rust-tools"
     end,
-    confige = function(_, opts)
+    config = function(_, opts)
       require("rust-tools").setup(opts)
     end,
     dependencies = {
@@ -141,6 +141,16 @@ return {
     ft = "rust",
     init = function()
       vim.g.rustfmt_autosave = 1
+    end,
+  },
+
+  -- Code assistant
+  {
+    "Exafunction/codeium.vim",
+    lazy = false,
+    config = function()
+      vim.g.codeium_enabled = false
+      vim.g.codeium_no_map_tab = false
     end,
   },
 }

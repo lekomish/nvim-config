@@ -5,7 +5,7 @@ local map = vim.keymap.set
 -- Basic
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
-map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>", { desc = "General Save file" })
 
 -- Git
 map("n", "<leader>gl", "<cmd> Flog <cr>", { desc = "Git log" })
@@ -30,3 +30,9 @@ end, { desc = "Debug step over" })
 -- Go
 map("n", "<leader>gsj", "<cmd> GoTagAdd json <cr>", { desc = "Go add JSON tag to struct" })
 map("n", "<leader>gsy", "<cmd> GoTagAdd yaml <cr>", { desc = "Go add YAML tag to struct" })
+
+-- Code assistant
+map("n", "<leader>ct", "<cmd> CodeiumToggle <cr>", { desc = "Code assistant toggle" })
+map("i", "<C-a>", function()
+  return vim.fn["codeium#Accept"]()
+end, { expr = true, silent = true, desc = "Code assistant accept" })
