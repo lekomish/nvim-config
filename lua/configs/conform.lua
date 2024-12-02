@@ -3,8 +3,12 @@ local options = {
     css = { "prettier" },
     go = { "gofumpt", "goimports-reviser", "golines" },
     html = { "prettier" },
+    javascript = { "prettier" },
+    javascriptreact = { "prettier" },
     lua = { "stylua" },
     python = { "isort", "black" },
+    typescript = { "prettier" },
+    typescriptreact = { "prettier" },
   },
 
   formatters = {
