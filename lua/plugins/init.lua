@@ -120,4 +120,27 @@ return {
       vim.cmd [[silent! GoInstallDeps]]
     end,
   },
+
+  -- Rust plugins
+  {
+    "simrat39/rust-tools.nvim",
+    ft = "rust",
+    opts = function()
+      require "configs.rust-tools"
+    end,
+    confige = function(_, opts)
+      require("rust-tools").setup(opts)
+    end,
+    dependencies = {
+      "neovim/nvim-lspconfig",
+    },
+  },
+
+  {
+    "rust-lang/rust.vim",
+    ft = "rust",
+    init = function()
+      vim.g.rustfmt_autosave = 1
+    end,
+  },
 }

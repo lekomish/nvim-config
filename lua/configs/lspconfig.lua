@@ -6,7 +6,6 @@ local util = require "lspconfig/util"
 
 local servers = {
   "cssls",
-  "gopls",
   "html",
   "lua_ls",
   "pyright",
