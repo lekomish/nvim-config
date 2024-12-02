@@ -1,5 +1,7 @@
 local options = {
   formatters_by_ft = {
+    c = { "clang-format" },
+    cpp = { "clang-format" },
     css = { "prettier" },
     go = { "gofumpt", "goimports-reviser", "golines" },
     html = { "prettier" },
