@@ -1,4 +1,3 @@
-local lspconfig = require "lspconfig"
 local nvlsp = require "nvchad.configs.lspconfig"
 
 local opts = {

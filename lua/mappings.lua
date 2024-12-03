@@ -31,6 +31,11 @@ end, { desc = "Debug step over" })
 map("n", "<leader>gsj", "<cmd> GoTagAdd json <cr>", { desc = "Go add JSON tag to struct" })
 map("n", "<leader>gsy", "<cmd> GoTagAdd yaml <cr>", { desc = "Go add YAML tag to struct" })
 
+-- Rust
+map("n", "<leader>rcu", function()
+  require("crates").upgrade_all_crates()
+end, { desc = "Rust Upgrade all crates" })
+
 -- Code assistant
 map("n", "<leader>ct", "<cmd> CodeiumToggle <cr>", { desc = "Code assistant toggle" })
 map("i", "<C-a>", function()
