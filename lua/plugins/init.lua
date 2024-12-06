@@ -146,7 +146,8 @@ return {
 
   {
     "saecki/crates.nvim",
-    ft = { "rust", "toml" },
+    ft = { "rust" },
+    event = { "BufRead Cargo.toml" },
     config = function(_, opts)
       local crates = require "crates"
       crates.setup(opts)
