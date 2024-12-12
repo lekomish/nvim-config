@@ -34,6 +34,7 @@ local opts = {
     "python",
     "requirements",
     "rust",
+    "scss",
     "sql",
     "toml",
     "typescript",

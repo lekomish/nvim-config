@@ -10,6 +10,7 @@ local servers = {
   "html",
   "lua_ls",
   "pyright",
+  "tailwindcss",
   "ts_ls",
 }
 local nvlsp = require "nvchad.configs.lspconfig"
