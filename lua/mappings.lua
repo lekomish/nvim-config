@@ -4,7 +4,7 @@ local map = vim.keymap.set
 
 -- Basic
 map("n", ";", ":", { desc = "CMD enter command mode" })
-map("i", "jk", "<ESC>")
+-- map("i", "jk", "<ESC>")
 map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>", { desc = "General Save file" })
 
 -- Git
