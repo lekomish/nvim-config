@@ -8,37 +8,12 @@ local options = {
     javascript = { "prettier" },
     javascriptreact = { "prettier" },
     lua = { "stylua" },
-    python = { "isort", "black" },
+    python = { "ruff_fix", "ruff_format" },
     typescript = { "prettier" },
     typescriptreact = { "prettier" },
   },
 
   formatters = {
-    -- python
-    isort = {
-      command = "isort",
-      args = {
-        "--profile",
-        "black",
-        "--line-length",
-        "90",
-        "--extend-skip",
-        "__init__.py",
-        "--trailing-comma",
-        "--quiet",
-        "-",
-      },
-    },
-    black = {
-      command = "black",
-      args = {
-        "--line-length",
-        "90",
-        "--quiet",
-        "-",
-      },
-    },
-
     -- Go
     ["go-imports-reviser"] = {
       prepend_args = {
