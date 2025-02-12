@@ -11,6 +11,7 @@ local servers = {
   "lua_ls",
   "marksman",
   "pyright",
+  "ruff",
   "tailwindcss",
   "ts_ls",
 }
