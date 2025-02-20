@@ -12,6 +12,7 @@ map("n", "<leader>gl", "<cmd> Flog <cr>", { desc = "Git log" })
 map("n", "<leader>gh", "<cmd> DiffviewFileHistory <cr>", { desc = "Git history" })
 map("n", "<leader>gc", "<cmd> DiffviewOpen HEAD~1 <cr>", { desc = "Git last commit" })
 map("n", "<leader>gh", "<cmd> DiffviewToggleFile <cr>", { desc = "Git toggle commits history" })
+map("n", "<leader>lg", "<cmd> LazyGit <cr>", { desc = "LazyGit" })
 
 -- Debug
 map("n", "<leader>du", function()

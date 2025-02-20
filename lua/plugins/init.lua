@@ -76,6 +76,21 @@ return {
     lazy = false,
   },
 
+  {
+    "kdheepak/lazygit.nvim",
+    lazy = true,
+    cmd = {
+      "LazyGit",
+      "LazyGitConfig",
+      "LazyGitCurrentFile",
+      "LazyGitFilter",
+      "LazyGitFilterCurrentFile",
+    },
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+  },
+
   -- Asynchronous IO
   {
     "nvim-neotest/nvim-nio",
