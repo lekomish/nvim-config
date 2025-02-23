@@ -6,6 +6,7 @@ local util = require "lspconfig/util"
 
 local servers = {
   "clangd",
+  "neocmake",
   "cssls",
   "html",
   "lua_ls",
