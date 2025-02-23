@@ -8,6 +8,7 @@ local options = {
     javascript = { "prettier" },
     javascriptreact = { "prettier" },
     lua = { "stylua" },
+    markdown = { "prettier", "markdown-cli2", "markdown-toc" },
     python = { "ruff_fix", "ruff_format" },
     typescript = { "prettier" },
     typescriptreact = { "prettier" },
