@@ -31,6 +31,7 @@ local opts = {
     "markdown",
     "markdown_inline",
     "mermaid",
+    "nu",
     "python",
     "requirements",
     "rust",
