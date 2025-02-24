@@ -5,7 +5,6 @@ local lspconfig = require "lspconfig"
 local util = require "lspconfig/util"
 
 local servers = {
-  "clangd",
   "neocmake",
   "cssls",
   "html",
@@ -26,6 +25,15 @@ for _, lsp in ipairs(servers) do
     capabilities = nvlsp.capabilities,
   }
 end
+
+lspconfig.clangd.setup {
+  on_attach = function(client, bufnr)
+    client.server_capabilities.signatureHelpProvider = false
+    nvlsp.on_attach(client, bufnr)
+  end,
+  on_init = nvlsp.on_init,
+  capabilities = nvlsp.capabilities,
+}
 
 lspconfig.gopls.setup {
   on_attach = nvlsp.on_attach,
