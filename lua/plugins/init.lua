@@ -32,17 +32,30 @@ return {
   -- Debuger
   {
     "mfussenegger/nvim-dap",
+    dependencies = {
+      "rcarriga/nvim-dap-ui",
+      "nvim-neotest/nvim-nio",
+      "theHamsta/nvim-dap-virtual-text",
+    },
   },
 
   {
     "rcarriga/nvim-dap-ui",
     config = function()
-      require "configs.dapui"
+      require "configs.dap-ui"
     end,
     dependencies = {
       "mfussenegger/nvim-dap",
       "nvim-neotest/nvim-nio",
     },
+  },
+
+  {
+    "theHamsta/nvim-dap-virtual-text",
+  },
+
+  {
+    "nvim-telescope/telescope-dap.nvim",
   },
 
   {
@@ -56,6 +69,18 @@ return {
       "mfussenegger/nvim-dap",
       "rcarriga/nvim-dap-ui",
     },
+  },
+
+  {
+    "leoluz/nvim-dap-go",
+    ft = "go",
+    dependencies = {
+      "mfussenegger/nvim-dap",
+      "rcarriga/nvim-dap-ui",
+    },
+    config = function()
+      require("dap-go").setup()
+    end,
   },
 
   -- Git

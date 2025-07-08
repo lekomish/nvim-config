@@ -24,9 +24,12 @@ end, { desc = "Debug toggle breakpoint" })
 map("n", "<leader>ds", function()
   require("dap").continue()
 end, { desc = "Debug start" })
-map("n", "<leader>dn", function()
+map("n", "<leader>do", function()
   require("dap").step_over()
 end, { desc = "Debug step over" })
+map("n", "<leader>di", function()
+  require("dap").step_into()
+end, { desc = "Debug step into" })
 
 -- Go
 map("n", "<leader>gsj", "<cmd> GoTagAdd json <cr>", { desc = "Go add JSON tag to struct" })
