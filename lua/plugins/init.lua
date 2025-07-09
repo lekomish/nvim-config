@@ -62,7 +62,8 @@ return {
     "mfussenegger/nvim-dap-python",
     ft = "python",
     config = function()
-      local path = "~/AppData/Local/nvim-data/mason/packages/debugpy/venv/Scripts/python.exe"
+      -- local path = "~/AppData/Local/nvim-data/mason/packages/debugpy/venv/Scripts/python.exe"
+      local path = "~/.virtaulenvs/debugpy/bin/python"
       require("dap-python").setup(path)
     end,
     dependencies = {
