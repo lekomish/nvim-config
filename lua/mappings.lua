@@ -7,6 +7,11 @@ map("n", ";", ":", { desc = "CMD enter command mode" })
 -- map("i", "jk", "<ESC>")
 map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>", { desc = "General Save file" })
 
+-- Theme
+map("n", "<leader>tt", function()
+  require("base46").toggle_transparency()
+end, { desc = "Toggle theme transparency" })
+
 -- Git
 map("n", "<leader>gl", "<cmd> Flog <cr>", { desc = "Git log" })
 map("n", "<leader>gh", "<cmd> DiffviewFileHistory <cr>", { desc = "Git history" })
